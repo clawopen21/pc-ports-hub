@@ -9,6 +9,16 @@ const gamesData = [
         description: "Full decompilation with 60fps, widescreen, and mod support.",
         githubUrl: "https://github.com/sm64-port/sm64-port",
         videoUrl: "https://www.youtube.com/watch?v=vwmkMjYFO-k",
+        tutorials: {
+            youtube: [
+                { title: "How to install Mario 64 PC on Steam Deck", url: "https://www.youtube.com/watch?v=sm-XpuEPxiY", author: "Retro Gaming" },
+                { title: "SM64 PC Builder 2 Tutorial", url: "https://www.youtube.com/watch?v=vwmkMjYFO-k", author: "sm64pc.info" }
+            ],
+            written: [
+                { title: "Super Mario 64 PC Port on Steam Deck Guide", url: "https://retroresolve.com/guides/how-to-play-the-super-mario-64-pc-port-on-steam-deck/", site: "RetroResolve" },
+                { title: "SM64 PC Port Central", url: "https://sm64pc.info/", site: "sm64pc.info" }
+            ]
+        },
         status: "Complete",
         features: {
             ultrawide: true,
@@ -33,6 +43,15 @@ const gamesData = [
         description: "Modern PC port with save states, randomizer support, and enhancements.",
         githubUrl: "https://github.com/HarbourMasters/Shipwright",
         videoUrl: "https://www.youtube.com/watch?v=ERKxHQHi8Dw",
+        tutorials: {
+            youtube: [
+                { title: "Ship of Harkinian - Full Installation Tutorial", url: "https://www.youtube.com/watch?v=sETZH_VN0ao", author: "Steam Deck Gaming" },
+                { title: "Play Ocarina of Time NATIVELY on Steam Deck", url: "https://www.youtube.com/watch?v=VotwSz3aXf8", author: "Linux Gaming Central" }
+            ],
+            written: [
+                { title: "How to Set Up Zelda: Ocarina of Time PC Port on Steam Deck", url: "https://steamdeckhq.com/tips-and-guides/how-to-set-up-zelda-ocarina-of-time-pc-port-on-steam-deck/", site: "Steam Deck HQ" }
+            ]
+        },
         status: "Complete",
         features: {
             ultrawide: true,
@@ -58,6 +77,14 @@ const gamesData = [
         description: "Direct sequel port with all Majora's Mask specific features.",
         githubUrl: "https://github.com/HarbourMasters/2ship2harkinian",
         videoUrl: null,
+        tutorials: {
+            youtube: [
+                { title: "Majora's Mask PC Port - Installation Guide", url: "https://www.youtube.com/watch?v=sETZH_VN0ao", author: "Steam Deck Gaming" }
+            ],
+            written: [
+                { title: "2 Ship 2 Harkinian GitHub Releases", url: "https://github.com/HarbourMasters/2ship2harkinian/releases", site: "GitHub" }
+            ]
+        },
         status: "Complete",
         features: {
             ultrawide: true,
@@ -82,6 +109,16 @@ const gamesData = [
         description: "Full PC port with modern controls and 60fps support.",
         githubUrl: "https://github.com/n64decomp/perfect_dark",
         videoUrl: null,
+        tutorials: {
+            youtube: [
+                { title: "How To Play Perfect Dark's PC Port on the Steam Deck", url: "https://www.youtube.com/watch?v=sMZ4J2bNTsg", author: "Nerrel" },
+                { title: "Perfect Dark PC Port on Steam Deck Tutorial", url: "https://www.youtube.com/watch?v=WlVX92O474s", author: "Steam Deck Gaming" },
+                { title: "How to play and install the Perfect Dark PC port", url: "https://www.youtube.com/watch?v=9vpm3xPKEow", author: "Gaming Guide" }
+            ],
+            written: [
+                { title: "Perfect Dark PC Port Discussion", url: "https://gbatemp.net/threads/perfect-dark-gets-a-fully-playable-pc-port.642573/", site: "GBAtemp" }
+            ]
+        },
         status: "Complete",
         features: {
             ultrawide: true,
@@ -105,6 +142,16 @@ const gamesData = [
         description: "Decompiled and ported to PC with enhanced visuals.",
         githubUrl: "https://github.com/open-goal/jak-project",
         videoUrl: "https://www.youtube.com/watch?v=LKNbvvNBiAo",
+        tutorials: {
+            youtube: [
+                { title: "Jak & Daxter Native on Steam Deck and PC | How to Install", url: "https://www.youtube.com/watch?v=na9Jj2LEYK0", author: "NerdZap" },
+                { title: "OpenGOAL Launcher - Steam Deck Setup", url: "https://www.youtube.com/watch?v=l8zt0Hqf3aU", author: "Steam Deck Gaming" }
+            ],
+            written: [
+                { title: "Play Jak and Daxter Natively on Steam Deck", url: "https://nerdzap.com/guides/jak-and-daxter-native-steam-deck/", site: "NerdZap" },
+                { title: "OpenGOAL Installation Guide", url: "https://opengoal.dev/docs/usage/installation/", site: "OpenGOAL Docs" }
+            ]
+        },
         status: "Complete",
         features: {
             ultrawide: true,
@@ -128,6 +175,13 @@ const gamesData = [
         description: "Native PC port with online multiplayer support.",
         githubUrl: "https://github.com/HarbourMasters/spaghetti-kart",
         videoUrl: null,
+        tutorials: {
+            youtube: [],
+            written: [
+                { title: "SpaghettiKart - Mario Kart 64 PC Port Overview", url: "https://retrorgb.com/mario-kart-64-spaghetti-kart.html", site: "RetroRGB" },
+                { title: "Mario Kart 64 PC Port Reddit Discussion", url: "https://www.reddit.com/r/SteamDeck/comments/1lgwfr1/mario_kart_64_native_pc_port_on_deck/", site: "r/SteamDeck" }
+            ]
+        },
         status: "Beta",
         features: {
             ultrawide: true,

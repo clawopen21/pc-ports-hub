@@ -220,6 +220,59 @@ function loadGameDetails() {
             </div>
         `).join('');
     }
+
+    // Populate tutorials
+    const tutorialsSection = document.getElementById('tutorials-section');
+    const youtubeTutorials = document.getElementById('youtube-tutorials');
+    const youtubeList = document.getElementById('youtube-list');
+    const writtenTutorials = document.getElementById('written-tutorials');
+    const writtenList = document.getElementById('written-list');
+    
+    if (game.tutorials && tutorialsSection) {
+        let hasTutorials = false;
+        
+        // YouTube tutorials
+        if (game.tutorials.youtube && game.tutorials.youtube.length > 0 && youtubeList) {
+            hasTutorials = true;
+            youtubeTutorials.classList.remove('hidden');
+            youtubeList.innerHTML = game.tutorials.youtube.map(t => `
+                <a href="${t.url}" target="_blank" rel="noopener noreferrer"
+                   class="flex items-center gap-3 p-3 border border-retro-gray rounded-lg hover:border-red-500 hover:bg-red-500/5 transition-all group">
+                    <svg class="w-5 h-5 text-red-500 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                    </svg>
+                    <div class="flex-1 min-w-0">
+                        <div class="text-sm text-white group-hover:text-red-400 transition-colors truncate">${t.title}</div>
+                        <div class="text-xs text-gray-500">by ${t.author}</div>
+                    </div>
+                    <span class="text-xs text-gray-600 group-hover:text-red-400">↗</span>
+                </a>
+            `).join('');
+        }
+        
+        // Written tutorials
+        if (game.tutorials.written && game.tutorials.written.length > 0 && writtenList) {
+            hasTutorials = true;
+            writtenTutorials.classList.remove('hidden');
+            writtenList.innerHTML = game.tutorials.written.map(t => `
+                <a href="${t.url}" target="_blank" rel="noopener noreferrer"
+                   class="flex items-center gap-3 p-3 border border-retro-gray rounded-lg hover:border-neon-green hover:bg-neon-green/5 transition-all group">
+                    <svg class="w-5 h-5 text-neon-green flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                    </svg>
+                    <div class="flex-1 min-w-0">
+                        <div class="text-sm text-white group-hover:text-neon-green transition-colors truncate">${t.title}</div>
+                        <div class="text-xs text-gray-500">${t.site}</div>
+                    </div>
+                    <span class="text-xs text-gray-600 group-hover:text-neon-green">↗</span>
+                </a>
+            `).join('');
+        }
+        
+        if (hasTutorials) {
+            tutorialsSection.classList.remove('hidden');
+        }
+    }
 }
 
 // Run detail page logic if on game.html
