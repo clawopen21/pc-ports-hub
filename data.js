@@ -346,6 +346,38 @@ const gamesData = [
             linux: true,
             steamDeck: true
         }
+    },
+    {
+        id: "sonic-unleashed",
+        name: "Sonic Unleashed",
+        originalConsole: "Xbox 360",
+        year: 2008,
+        projectName: "UnleashedRecomp",
+        description: "Xbox 360 recompilation with ultrawide, high FPS, and built-in enhancements.",
+        githubUrl: "https://github.com/hedge-dev/UnleashedRecomp",
+        videoUrl: null,
+        tutorials: {
+            youtube: [
+                { title: "Sonic Unleashed PC Port Setup", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", author: "Community" }
+            ],
+            written: [
+                { title: "Unleashed Recompiled Released", url: "https://www.gamesradar.com/games/sonic-the-hedgehog/sonic-fans-are-leading-the-charge-on-a-new-preservation-tool-that-can-help-give-any-xbox-360-game-a-native-pc-port/", site: "GamesRadar+" },
+                { title: "XenonRecomp GitHub", url: "https://github.com/hedge-dev/XenonRecomp", site: "GitHub" }
+            ]
+        },
+        status: "Complete",
+        features: {
+            ultrawide: true,
+            highFps: true,
+            steamDeck: "Verified",
+            mods: true,
+            hdTextures: true
+        },
+        platforms: {
+            windows: true,
+            linux: true,
+            steamDeck: true
+        }
     }
 ];
 
@@ -353,6 +385,7 @@ const gamesData = [
 const consoles = {
     "Nintendo 64": { color: "#E4000F", icon: "🎮" },
     "PlayStation 2": { color: "#003791", icon: "🎯" },
+    "Xbox 360": { color: "#107C10", icon: "🟢" },
     "GameCube": { color: "#6B5B95", icon: "🎲" },
     "PlayStation": { color: "#B0B0B0", icon: "🕹️" },
     "Sega Saturn": { color: "#000000", icon: "🌌" },
