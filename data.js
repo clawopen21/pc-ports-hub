@@ -195,6 +195,157 @@ const gamesData = [
             linux: true,
             steamDeck: true
         }
+    },
+    {
+        id: "banjo-kazooie",
+        name: "Banjo-Kazooie",
+        originalConsole: "Nintendo 64",
+        year: 1998,
+        projectName: "BanjoRecomp",
+        description: "Fresh N64 Recompiled port with 4K, 120fps, ultrawide, and dual-analog camera support.",
+        githubUrl: "https://github.com/BanjoRecomp/BanjoRecomp",
+        videoUrl: null,
+        tutorials: {
+            youtube: [
+                { title: "Banjo-Kazooie PC Port Setup Guide", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", author: "Community" }
+            ],
+            written: [
+                { title: "Banjo-Kazooie PC Port Released", url: "https://www.videogameschronicle.com/news/banjo-kazooie-now-has-a-pc-port-with-4k-120fps-and-ultrawide-support/", site: "VGC" },
+                { title: "BanjoRecomp GitHub Releases", url: "https://github.com/BanjoRecomp/BanjoRecomp/releases", site: "GitHub" }
+            ]
+        },
+        status: "Complete",
+        features: {
+            ultrawide: true,
+            highFps: true,
+            steamDeck: "Playable",
+            mods: true,
+            hdTextures: true
+        },
+        platforms: {
+            windows: true,
+            linux: true,
+            mac: true,
+            steamDeck: true
+        }
+    },
+    {
+        id: "mystical-ninja",
+        name: "Mystical Ninja Starring Goemon",
+        originalConsole: "Nintendo 64",
+        year: 1997,
+        projectName: "Goemon64Recomp",
+        description: "Recompiled PC port of the cult classic action-adventure with enhanced visuals.",
+        githubUrl: "https://github.com/klorfmorf/Goemon64Recomp",
+        videoUrl: null,
+        tutorials: {
+            youtube: [],
+            written: [
+                { title: "Goemon 64: Recompiled GitHub", url: "https://github.com/klorfmorf/Goemon64Recomp", site: "GitHub" },
+                { title: "Mystical Ninja PC Port Discussion", url: "https://www.reddit.com/r/emulation/comments/1dz2rz9/mystical_ninja_starring_goemon_for_n64_gets_a/", site: "r/emulation" }
+            ]
+        },
+        status: "Complete",
+        features: {
+            ultrawide: true,
+            highFps: true,
+            steamDeck: "Playable",
+            mods: true,
+            hdTextures: false
+        },
+        platforms: {
+            windows: true,
+            linux: true,
+            steamDeck: true
+        }
+    },
+    {
+        id: "quest-64",
+        name: "Quest 64",
+        originalConsole: "Nintendo 64",
+        year: 1998,
+        projectName: "Quest64Recomp",
+        description: "Early alpha recompilation of the N64 RPG with mod support planned.",
+        githubUrl: "https://github.com/Rainchus/Quest64-Recomp",
+        videoUrl: null,
+        tutorials: {
+            youtube: [],
+            written: [
+                { title: "Quest 64 Recomp Public Release", url: "https://retrorgb.com/quest-64-recomp-public-release.html", site: "RetroRGB" },
+                { title: "Quest 64 Alpha Release Info", url: "https://www.timeextension.com/news/2026/01/holy-magic-century-batman-the-infamous-quest-64-is-being-recompiled-for-pc", site: "Time Extension" }
+            ]
+        },
+        status: "Alpha",
+        features: {
+            ultrawide: true,
+            highFps: true,
+            steamDeck: "Untested",
+            mods: true,
+            hdTextures: false
+        },
+        platforms: {
+            windows: true,
+            linux: true
+        }
+    },
+    {
+        id: "star-fox-64",
+        name: "Star Fox 64",
+        originalConsole: "Nintendo 64",
+        year: 1997,
+        projectName: "Starship",
+        description: "Harbour Masters port with native PC performance and mod support.",
+        githubUrl: "https://github.com/HarbourMasters/Starship",
+        videoUrl: null,
+        tutorials: {
+            youtube: [],
+            written: [
+                { title: "Starship Star Fox 64 PC Port Release", url: "https://gamingreinvented.com/news/harbour-masters-releases-star-fox-64-port-for-pc/", site: "Gaming Reinvented" },
+                { title: "Star Fox 64 PC Port Available", url: "https://www.reddit.com/r/Games/comments/1hkaubc/harbour_masters_release_starship_a_pc_port_of/", site: "r/Games" }
+            ]
+        },
+        status: "Complete",
+        features: {
+            ultrawide: true,
+            highFps: true,
+            steamDeck: "Verified",
+            mods: true,
+            hdTextures: true
+        },
+        platforms: {
+            windows: true,
+            linux: true,
+            steamDeck: true
+        }
+    },
+    {
+        id: "smash-64",
+        name: "Super Smash Bros.",
+        originalConsole: "Nintendo 64",
+        year: 1999,
+        projectName: "Smash64Recomp",
+        description: "Recompiled PC port with online multiplayer support via Project64Netplay.",
+        githubUrl: "https://github.com/Smash64Recomp/Smash64Recomp",
+        videoUrl: null,
+        tutorials: {
+            youtube: [],
+            written: [
+                { title: "Smash64Recomp GitHub", url: "https://github.com/Smash64Recomp/Smash64Recomp", site: "GitHub" }
+            ]
+        },
+        status: "Beta",
+        features: {
+            ultrawide: true,
+            highFps: true,
+            steamDeck: "Playable",
+            mods: true,
+            hdTextures: false
+        },
+        platforms: {
+            windows: true,
+            linux: true,
+            steamDeck: true
+        }
     }
 ];
 
