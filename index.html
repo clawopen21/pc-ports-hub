@@ -38,14 +38,23 @@
         .neon-border {
             box-shadow: 0 0 10px #39ff14, inset 0 0 10px rgba(57, 255, 20, 0.1);
         }
+        .neon-glow {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
         .neon-glow:hover {
             box-shadow: 0 0 20px #39ff14, inset 0 0 20px rgba(57, 255, 20, 0.2);
+            transform: translateY(-2px);
         }
         .grid-pattern {
             background-image: 
                 linear-gradient(rgba(57, 255, 20, 0.03) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(57, 255, 20, 0.03) 1px, transparent 1px);
             background-size: 50px 50px;
+            animation: gridPulse 4s ease-in-out infinite;
+        }
+        @keyframes gridPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
         }
         .scanline {
             position: relative;
@@ -64,6 +73,72 @@
             );
             background-size: 100% 4px;
             pointer-events: none;
+            animation: scanline 8s linear infinite;
+        }
+        @keyframes scanline {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100%); }
+        }
+        /* Micro-interactions */
+        .game-card {
+            transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .game-card:hover {
+            transform: translateY(-4px) scale(1.01);
+        }
+        .game-card:active {
+            transform: translateY(-2px) scale(0.99);
+        }
+        .btn-snap {
+            transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-snap:hover {
+            transform: scale(1.02);
+        }
+        .btn-snap:active {
+            transform: scale(0.98);
+        }
+        .link-hover {
+            position: relative;
+        }
+        .link-hover::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #39ff14;
+            transition: width 0.2s ease;
+        }
+        .link-hover:hover::after {
+            width: 100%;
+        }
+        .badge-pulse {
+            animation: badgePulse 2s ease-in-out infinite;
+        }
+        @keyframes badgePulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        .stagger-in {
+            animation: staggerIn 0.4s ease-out backwards;
+        }
+        @keyframes staggerIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .feature-icon {
+            transition: all 0.2s ease;
+        }
+        .feature-icon:hover {
+            transform: rotate(5deg) scale(1.1);
         }
     </style>
 </head>
@@ -81,13 +156,13 @@
                     </span>
                 </div>
                 <nav class="hidden md:flex items-center gap-6">
-                    <a href="#games" class="text-sm hover:text-neon-green transition-colors">Games</a>
-                    <a href="#platforms" class="text-sm hover:text-neon-green transition-colors">Platforms</a>
-                    <a href="#features" class="text-sm hover:text-neon-green transition-colors">Features</a>
-                    <a href="#about" class="text-sm hover:text-neon-green transition-colors">About</a>
+                    <a href="#games" class="text-sm link-hover hover:text-neon-green transition-colors">Games</a>
+                    <a href="#platforms" class="text-sm link-hover hover:text-neon-green transition-colors">Platforms</a>
+                    <a href="#features" class="text-sm link-hover hover:text-neon-green transition-colors">Features</a>
+                    <a href="#progress" class="text-sm link-hover text-neon-green">Progress</a>
                 </nav>
                 <a href="https://github.com/clawopen21/pc-ports-hub" 
-                   class="flex items-center gap-2 px-4 py-2 border border-neon-green text-neon-green text-sm hover:bg-neon-green hover:text-retro-black transition-all rounded font-medium">
+                   class="btn-snap flex items-center gap-2 px-4 py-2 border border-neon-green text-neon-green text-sm hover:bg-neon-green hover:text-retro-black transition-all rounded font-medium">
                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                     </svg>
@@ -111,11 +186,11 @@
                 Discover community-made PC ports of classic console games. Decompiled, recompiled, and enhanced for modern hardware. No emulation required.
             </p>
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="#games" class="px-6 py-3 bg-neon-green text-retro-black font-medium rounded hover:bg-neon-green-dim transition-colors">
+                <a href="#games" class="btn-snap px-6 py-3 bg-neon-green text-retro-black font-medium rounded hover:bg-neon-green-dim">
                     Browse Games
                 </a>
-                <a href="#contribute" class="px-6 py-3 border border-gray-600 text-white rounded hover:border-neon-green hover:text-neon-green transition-colors">
-                    How It Works
+                <a href="#progress" class="btn-snap px-6 py-3 border border-gray-600 text-white rounded hover:border-neon-green hover:text-neon-green">
+                    View Progress
                 </a>
             </div>
         </div>
@@ -228,18 +303,32 @@
         </div>
     </section>
 
-    <!-- Legal Note -->
-    <section id="about" class="py-12 border-t border-retro-gray bg-retro-dark/50">
-        <div class="max-w-3xl mx-auto px-4 text-center">
-            <div class="inline-flex items-center gap-2 px-4 py-2 bg-yellow-500/10 border border-yellow-500/30 rounded-lg mb-4">
-                <svg class="w-5 h-5 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
-                </svg>
-                <span class="text-sm text-yellow-500 font-medium">Legal Notice</span>
+    <!-- Progress Overview -->
+    <section id="progress" class="py-16 border-t border-retro-gray">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="font-retro text-xl text-white mb-8 text-center">Port Progress</h2>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="text-center p-6 border border-retro-gray rounded-lg hover:border-neon-green/50 transition-colors group">
+                    <div class="font-retro text-3xl text-neon-green mb-2 group-hover:scale-110 transition-transform">12</div>
+                    <div class="text-sm text-gray-400">✅ Complete</div>
+                    <div class="text-xs text-gray-600 mt-1">Fully playable</div>
+                </div>
+                <div class="text-center p-6 border border-retro-gray rounded-lg hover:border-yellow-500/50 transition-colors group">
+                    <div class="font-retro text-3xl text-yellow-400 mb-2 group-hover:scale-110 transition-transform">8</div>
+                    <div class="text-sm text-gray-400">🔄 Beta</div>
+                    <div class="text-xs text-gray-600 mt-1">Mostly playable</div>
+                </div>
+                <div class="text-center p-6 border border-retro-gray rounded-lg hover:border-orange-500/50 transition-colors group">
+                    <div class="font-retro text-3xl text-orange-400 mb-2 group-hover:scale-110 transition-transform">5</div>
+                    <div class="text-sm text-gray-400">⚙️ Alpha</div>
+                    <div class="text-xs text-gray-600 mt-1">Early builds</div>
+                </div>
+                <div class="text-center p-6 border border-retro-gray rounded-lg hover:border-blue-500/50 transition-colors group">
+                    <div class="font-retro text-3xl text-blue-400 mb-2 group-hover:scale-110 transition-transform">15+</div>
+                    <div class="text-sm text-gray-400">🔨 In Progress</div>
+                    <div class="text-xs text-gray-600 mt-1">Active development</div>
+                </div>
             </div>
-            <p class="text-sm text-gray-400">
-                This site does not host any copyrighted material, ROMs, or game assets. All ports require you to legally obtain your own copy of the original game. We only link to open-source decompilation projects and community enhancement tools.
-            </p>
         </div>
     </section>
 
@@ -248,7 +337,7 @@
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center justify-between gap-4">
                 <div class="flex items-center gap-3">
-                    <div class="w-6 h-6 bg-neon-green rounded flex items-center justify-center">
+                    <div class="w-6 h-6 bg-neon-green rounded flex items-center justify-center hover:rotate-12 transition-transform cursor-pointer">
                         <span class="text-retro-black font-retro text-[8px]">P</span>
                     </div>
                     <span class="text-sm text-gray-500">
@@ -256,9 +345,10 @@
                     </span>
                 </div>
                 <div class="flex items-center gap-6 text-sm text-gray-500">
-                    <a href="#" class="hover:text-neon-green transition-colors">Submit a Port</a>
-                    <a href="#" class="hover:text-neon-green transition-colors">Report Issue</a>
-                    <a href="#" class="hover:text-neon-green transition-colors">GitHub</a>
+                    <span class="text-xs text-gray-600" title="Requires legally owned game">ROMs not included</span>
+                    <a href="#" class="hover:text-neon-green transition-colors link-hover">Submit</a>
+                    <a href="#" class="hover:text-neon-green transition-colors link-hover">Issues</a>
+                    <a href="https://github.com/clawopen21/pc-ports-hub" class="hover:text-neon-green transition-colors link-hover">GitHub</a>
                 </div>
             </div>
         </div>
