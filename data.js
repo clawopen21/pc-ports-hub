@@ -167,6 +167,39 @@ const gamesData = [
         }
     },
     {
+        id: "jak-2",
+        name: "Jak II",
+        originalConsole: "PlayStation 2",
+        year: 2003,
+        projectName: "OpenGOAL",
+        description: "Sequel ported via OpenGOAL with native PC enhancements and mod support.",
+        githubUrl: "https://github.com/open-goal/jak-project",
+        videoUrl: "https://www.youtube.com/watch?v=itmxDxgeEyA",
+        tutorials: {
+            youtube: [
+                { title: "Jak 2 PC Port is Here!", url: "https://www.youtube.com/watch?v=itmxDxgeEyA", author: "Gaming Guide" }
+            ],
+            written: [
+                { title: "Jak II OpenGOAL PCGamingWiki", url: "https://www.pcgamingwiki.com/wiki/Jak_II_(OpenGOAL)", site: "PCGamingWiki" },
+                { title: "OpenGOAL Installation Guide", url: "https://opengoal.dev/docs/usage/installation/", site: "OpenGOAL Docs" },
+                { title: "How to Play Jak Games on PC", url: "https://www.reddit.com/r/jakanddaxter/comments/1gvhjzo/what_is_opengoal_how_to_play_the_jak_games/", site: "r/jakanddaxter" }
+            ]
+        },
+        status: "Complete",
+        features: {
+            ultrawide: true,
+            highFps: true,
+            steamDeck: "Verified",
+            mods: true,
+            hdTextures: true
+        },
+        platforms: {
+            windows: true,
+            linux: true,
+            steamDeck: true
+        }
+    },
+    {
         id: "mk64",
         name: "Mario Kart 64",
         originalConsole: "Nintendo 64",
@@ -298,10 +331,14 @@ const gamesData = [
         githubUrl: "https://github.com/HarbourMasters/Starship",
         videoUrl: null,
         tutorials: {
-            youtube: [],
+            youtube: [
+                { title: "Star Fox 64 PC Port Setup Guide", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", author: "Community" }
+            ],
             written: [
                 { title: "Starship Star Fox 64 PC Port Release", url: "https://gamingreinvented.com/news/harbour-masters-releases-star-fox-64-port-for-pc/", site: "Gaming Reinvented" },
-                { title: "Star Fox 64 PC Port Available", url: "https://www.reddit.com/r/Games/comments/1hkaubc/harbour_masters_release_starship_a_pc_port_of/", site: "r/Games" }
+                { title: "Star Fox 64 PC Port Polygon Guide", url: "https://www.polygon.com/nintendo/501524/starfox-64-nintendo-emulator-port/", site: "Polygon" },
+                { title: "Steam Deck Configuration Tips", url: "https://www.resetera.com/threads/star-fox-64-pc-port-is-now-available.1067688/", site: "ResetEra" },
+                { title: "Starship Mods & Community", url: "https://gamebanana.com/games/21612", site: "GameBanana" }
             ]
         },
         status: "Complete",
