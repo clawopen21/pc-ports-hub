@@ -64,7 +64,9 @@ const gamesData = [
         tutorials: {
             youtube: [
                 { title: "Ship of Harkinian - Full Installation Tutorial", url: "https://www.youtube.com/watch?v=sETZH_VN0ao", author: "Steam Deck Gaming", embed: true },
-                { title: "Play Ocarina of Time NATIVELY on Steam Deck", url: "https://www.youtube.com/watch?v=VotwSz3aXf8", author: "Linux Gaming Central", embed: true }
+                { title: "Play Ocarina of Time NATIVELY on Steam Deck", url: "https://www.youtube.com/watch?v=VotwSz3aXf8", author: "Linux Gaming Central", embed: true },
+                { title: "How to Easily Install Ship of Harkinian the OOT PC Port 2025", url: "https://www.youtube.com/watch?v=zxD4aADj8xc", author: "MrTeck", embed: false },
+                { title: "(2024) Ship of Harkinian Ocarina of Time PC Port - FULL GUIDE - 4K 144FPS", url: "https://www.youtube.com/watch?v=3AmXLmkFJEE", author: "Sorcerer", embed: false }
             ],
             written: [
                 { title: "How to Set Up Zelda: Ocarina of Time PC Port on Steam Deck", url: "https://steamdeckhq.com/tips-and-guides/how-to-set-up-zelda-ocarina-of-time-pc-port-on-steam-deck/", site: "Steam Deck HQ" }
@@ -146,7 +148,8 @@ const gamesData = [
             youtube: [
                 { title: "How To Play Perfect Dark's PC Port on the Steam Deck", url: "https://www.youtube.com/watch?v=sMZ4J2bNTsg", author: "Nerrel", embed: true },
                 { title: "Perfect Dark PC Port on Steam Deck Tutorial", url: "https://www.youtube.com/watch?v=WlVX92O474s", author: "Steam Deck Gaming", embed: true },
-                { title: "How to play and install the Perfect Dark PC port", url: "https://www.youtube.com/watch?v=9vpm3xPKEow", author: "Gaming Guide", embed: true }
+                { title: "How to play and install the Perfect Dark PC port", url: "https://www.youtube.com/watch?v=9vpm3xPKEow", author: "Warchild", embed: true },
+                { title: "Tutorial: Perfect Dark PC Port Installation", url: "https://www.youtube.com/watch?v=RmeZOMli7m0", author: "PixelCherryNinja", embed: false }
             ],
             written: [
                 { title: "Perfect Dark PC Port Discussion", url: "https://gbatemp.net/threads/perfect-dark-gets-a-fully-playable-pc-port.642573/", site: "GBAtemp" }
@@ -187,7 +190,9 @@ const gamesData = [
         tutorials: {
             youtube: [
                 { title: "Jak & Daxter Native on Steam Deck and PC | How to Install", url: "https://www.youtube.com/watch?v=na9Jj2LEYK0", author: "NerdZap", embed: true },
-                { title: "OpenGOAL Launcher - Steam Deck Setup", url: "https://www.youtube.com/watch?v=l8zt0Hqf3aU", author: "Steam Deck Gaming", embed: true }
+                { title: "OpenGOAL Launcher - Steam Deck Setup", url: "https://www.youtube.com/watch?v=l8zt0Hqf3aU", author: "Steam Deck Gaming", embed: true },
+                { title: "OpenGOAL Game Launcher - Install Tutorial (Jak and Daxter PC Port)", url: "https://www.youtube.com/watch?v=p8I9NfuZOgE", author: "OpenGOAL", embed: false },
+                { title: "Jak and Daxter PC Port - Classic Ported to PC! Install Tutorial", url: "https://www.youtube.com/watch?v=CiuSTJu4Cs0", author: "Retro Game Corps", embed: false }
             ],
             written: [
                 { title: "Play Jak and Daxter Natively on Steam Deck", url: "https://nerdzap.com/guides/jak-and-daxter-native-steam-deck/", site: "NerdZap" },
@@ -227,7 +232,8 @@ const gamesData = [
         foundryVideos: [],
         tutorials: {
             youtube: [
-                { title: "Jak 2 PC Port is Here!", url: "https://www.youtube.com/watch?v=itmxDxgeEyA", author: "Gaming Guide", embed: true }
+                { title: "Jak 2 PC Port is Here!", url: "https://www.youtube.com/watch?v=itmxDxgeEyA", author: "Gaming Guide", embed: true },
+                { title: "OpenGOAL Game Launcher - Install Tutorial (Jak and Daxter PC Port)", url: "https://www.youtube.com/watch?v=p8I9NfuZOgE", author: "OpenGOAL", embed: false }
             ],
             written: [
                 { title: "Jak II OpenGOAL PCGamingWiki", url: "https://www.pcgamingwiki.com/wiki/Jak_II_(OpenGOAL)", site: "PCGamingWiki" },
@@ -266,7 +272,10 @@ const gamesData = [
         redditCommunity: "https://www.reddit.com/r/mariokart/",
         foundryVideos: [],
         tutorials: {
-            youtube: [],
+            youtube: [
+                { title: "Mario Kart 64 PC Port Got Updated! Spaghetti Kart Setup Guide", url: "https://www.youtube.com/watch?v=Da-y_CkPLfQ", author: "Video Game Esoterica", embed: true },
+                { title: "Mario Kart 64 PC Port Gets a BIG Update! Spaghetti Kart", url: "https://www.youtube.com/watch?v=nosbf5w-vTs", author: "Video Game Esoterica", embed: false }
+            ],
             written: [
                 { title: "SpaghettiKart - Mario Kart 64 PC Port Overview", url: "https://retrorgb.com/mario-kart-64-spaghetti-kart.html", site: "RetroRGB" },
                 { title: "Mario Kart 64 PC Port Reddit Discussion", url: "https://www.reddit.com/r/SteamDeck/comments/1lgwfr1/mario_kart_64_native_pc_port_on_deck/", site: "r/SteamDeck" }
@@ -306,6 +315,9 @@ const gamesData = [
         foundryVideos: [],
         tutorials: {
             youtube: [
+                { title: "Banjo-Kazooie PC Port Recompilation | Setup, Graphics Showcase & Mod Guide", url: "https://www.youtube.com/watch?v=xFzWAdnTXEo", author: "WarriorMario", embed: true },
+                { title: "How to Play and Install Banjo Kazooie Recompile PC Port", url: "https://www.youtube.com/watch?v=Tok5GBPfssg", author: "Warchild", embed: true },
+                { title: "Definitive Way to Play Banjo-Kazooie | PC Port Setup Guide", url: "https://www.youtube.com/watch?v=F3-KAe4g3r8", author: "PixelCherryNinja", embed: false }
             ],
             written: [
                 { title: "Banjo-Kazooie PC Port Released", url: "https://www.videogameschronicle.com/news/banjo-kazooie-now-has-a-pc-port-with-4k-120fps-and-ultrawide-support/", site: "VGC" },
@@ -418,7 +430,8 @@ const gamesData = [
         foundryVideos: [],
         tutorials: {
             youtube: [
-                { title: "Star Fox 64 PC Port Setup Guide", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", author: "Community", embed: true }
+                { title: "How to Play and Install StarFox 64 PC PORT!", url: "https://www.youtube.com/watch?v=QTbBp5TGCgI", author: "Warchild", embed: true },
+                { title: "Starship: Der beste PC-Port von Starfox 64 / Lylat Wars", url: "https://www.youtube.com/watch?v=GKsZHGo69Z4", author: "N64Recomp Deutsch", embed: false }
             ],
             written: [
                 { title: "Starship Star Fox 64 PC Port Release", url: "https://gamingreinvented.com/news/harbour-masters-releases-star-fox-64-port-for-pc/", site: "Gaming Reinvented" },
@@ -494,9 +507,14 @@ const gamesData = [
             "https://placehold.co/600x400/1a1a1a/39ff14?text=120fps+Day+Stages"
         ],
         redditCommunity: "https://www.reddit.com/r/SonicUnleashed/",
-        foundryVideos: [],
+        foundryVideos: [
+            { title: "DF Retro EX: Sonic Unleashed PC Recompilation - A Direct Xbox 360 Port With Superb Extras", url: "https://www.youtube.com/watch?v=vjgt7PlLtEo", id: "vjgt7PlLtEo" }
+        ],
         tutorials: {
             youtube: [
+                { title: "Sonic Unleashed Steam Deck PC Port Setup Recomp Install Guide", url: "https://www.youtube.com/watch?v=x_eXmBgXnoc", author: "Retro Game Corps", embed: true },
+                { title: "Sonic Unleashed PC Port | Quick & Easy Install Guide", url: "https://www.youtube.com/watch?v=sSG_Kp_I4hw", author: "WarriorMario", embed: true },
+                { title: "How To Play and Install Sonic Unleashed PC Recompile Port", url: "https://www.youtube.com/watch?v=bAdXZGx0YtI", author: "Warchild", embed: false }
             ],
             written: [
                 { title: "Unleashed Recompiled Released", url: "https://www.gamesradar.com/games/sonic-the-hedgehog/sonic-fans-are-leading-the-charge-on-a-new-preservation-tool-that-can-help-give-any-xbox-360-game-a-native-pc-port/", site: "GamesRadar+" },
