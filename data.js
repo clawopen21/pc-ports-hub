@@ -12,9 +12,9 @@ const gamesData = [
         screenshots: [
             "https://img.youtube.com/vi/vwmkMjYFO-k/maxresdefault.jpg",
             "https://img.youtube.com/vi/sm-XpuEPxiY/maxresdefault.jpg",
-            "https://i.imgur.com/sm64_1.jpg",
-            "https://i.imgur.com/sm64_2.jpg",
-            "https://i.imgur.com/sm64_3.jpg"
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=SM64+PC+Gameplay",
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=4K+Textures",
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=WideScreen+Support"
         ],
         redditCommunity: "https://www.reddit.com/r/sm64pc/",
         foundryVideos: [],
@@ -55,9 +55,9 @@ const gamesData = [
         screenshots: [
             "https://img.youtube.com/vi/ERKxHQHi8Dw/maxresdefault.jpg",
             "https://img.youtube.com/vi/sETZH_VN0ao/maxresdefault.jpg",
-            "https://i.imgur.com/oot_1.jpg",
-            "https://i.imgur.com/oot_2.jpg",
-            "https://i.imgur.com/oot_3.jpg"
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=Ship+of+Harkinian",
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=HD+GUI",
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=Randomizer+Support"
         ],
         redditCommunity: "https://www.reddit.com/r/zeldaport/",
         foundryVideos: [],
@@ -96,9 +96,9 @@ const gamesData = [
         githubUrl: "https://github.com/HarbourMasters/2ship2harkinian",
         videoUrl: null,
         screenshots: [
-            "https://i.imgur.com/mm_1.jpg",
-            "https://i.imgur.com/mm_2.jpg",
-            "https://i.imgur.com/mm_3.jpg"
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=Majora's+Mask+PC",
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=4K+Support",
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=60fps+Gameplay"
         ],
         redditCommunity: "https://www.reddit.com/r/zeldaport/",
         foundryVideos: [],
@@ -137,8 +137,8 @@ const gamesData = [
         screenshots: [
             "https://img.youtube.com/vi/sMZ4J2bNTsg/maxresdefault.jpg",
             "https://img.youtube.com/vi/WlVX92O474s/maxresdefault.jpg",
-            "https://i.imgur.com/pd_1.jpg",
-            "https://i.imgur.com/pd_2.jpg"
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=Perfect+Dark+PC",
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=Modern+Controls"
         ],
         redditCommunity: "https://www.reddit.com/r/perfectdark/",
         foundryVideos: [],
@@ -178,9 +178,9 @@ const gamesData = [
         screenshots: [
             "https://img.youtube.com/vi/LKNbvvNBiAo/maxresdefault.jpg",
             "https://img.youtube.com/vi/na9Jj2LEYK0/maxresdefault.jpg",
-            "https://i.imgur.com/jak_1.jpg",
-            "https://i.imgur.com/jak_2.jpg",
-            "https://i.imgur.com/jak_3.jpg"
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=Jak+%26+Daxter+PC",
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=Enhanced+Visuals",
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=OpenGOAL+Engine"
         ],
         redditCommunity: "https://www.reddit.com/r/jakanddaxter/",
         foundryVideos: [],
@@ -219,9 +219,9 @@ const gamesData = [
         videoUrl: "https://www.youtube.com/watch?v=itmxDxgeEyA",
         screenshots: [
             "https://img.youtube.com/vi/itmxDxgeEyA/maxresdefault.jpg",
-            "https://i.imgur.com/jak2_1.jpg",
-            "https://i.imgur.com/jak2_2.jpg",
-            "https://i.imgur.com/jak2_3.jpg"
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=Jak+II+PC+Port",
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=HD+Support",
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=120fps+Gameplay"
         ],
         redditCommunity: "https://www.reddit.com/r/jakanddaxter/",
         foundryVideos: [],
@@ -259,9 +259,9 @@ const gamesData = [
         githubUrl: "https://github.com/HarbourMasters/spaghetti-kart",
         videoUrl: null,
         screenshots: [
-            "https://i.imgur.com/mk64_1.jpg",
-            "https://i.imgur.com/mk64_2.jpg",
-            "https://i.imgur.com/mk64_3.jpg"
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=Mario+Kart+64+PC",
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=Online+Multiplayer",
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=SpaghettiKart"
         ],
         redditCommunity: "https://www.reddit.com/r/mariokart/",
         foundryVideos: [],
@@ -296,19 +296,16 @@ const gamesData = [
         githubUrl: "https://github.com/BanjoRecomp/BanjoRecomp",
         videoUrl: null,
         screenshots: [
-            "https://i.imgur.com/banjo_1.jpg",
-            "https://i.imgur.com/banjo_2.jpg",
-            "https://i.imgur.com/banjo_3.jpg",
-            "https://i.imgur.com/banjo_4.jpg",
-            "https://i.imgur.com/banjo_5.jpg"
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=Banjo-Kazooie+PC",
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=4K+120fps+Support",
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=Ultrawide+Gameplay",
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=HD+Textures",
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=Dual+Analog+Camera"
         ],
         redditCommunity: "https://www.reddit.com/r/banjokazooie/",
-        foundryVideos: [
-            { title: "DF Tech Review: Banjo-Kazooie PC Port", url: "https://www.youtube.com/watch?v=4rD8yO7eZqA", id: "4rD8yO7eZqA" }
-        ],
+        foundryVideos: [],
         tutorials: {
             youtube: [
-                { title: "Banjo-Kazooie PC Port Setup Guide", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", author: "Community", embed: true }
             ],
             written: [
                 { title: "Banjo-Kazooie PC Port Released", url: "https://www.videogameschronicle.com/news/banjo-kazooie-now-has-a-pc-port-with-4k-120fps-and-ultrawide-support/", site: "VGC" },
@@ -340,9 +337,9 @@ const gamesData = [
         githubUrl: "https://github.com/klorfmorf/Goemon64Recomp",
         videoUrl: null,
         screenshots: [
-            "https://i.imgur.com/goemon_1.jpg",
-            "https://i.imgur.com/goemon_2.jpg",
-            "https://i.imgur.com/goemon_3.jpg"
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=Mystical+Ninja+PC",
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=Goemon64+Recomp",
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=Enhanced+Visuals"
         ],
         redditCommunity: "https://www.reddit.com/r/Goemon/",
         foundryVideos: [],
@@ -377,8 +374,8 @@ const gamesData = [
         githubUrl: "https://github.com/Rainchus/Quest64-Recomp",
         videoUrl: null,
         screenshots: [
-            "https://i.imgur.com/quest64_1.jpg",
-            "https://i.imgur.com/quest64_2.jpg"
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=Quest+64+PC",
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=Alpha+Build"
         ],
         redditCommunity: "https://www.reddit.com/r/n64/",
         foundryVideos: [],
@@ -412,10 +409,10 @@ const gamesData = [
         githubUrl: "https://github.com/HarbourMasters/Starship",
         videoUrl: null,
         screenshots: [
-            "https://i.imgur.com/starfox_1.jpg",
-            "https://i.imgur.com/starfox_2.jpg",
-            "https://i.imgur.com/starfox_3.jpg",
-            "https://i.imgur.com/starfox_4.jpg"
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=Star+Fox+64+PC",
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=Starship+Port",
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=120fps+Barrel+Rolls",
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=4K+Support"
         ],
         redditCommunity: "https://www.reddit.com/r/starfox/",
         foundryVideos: [],
@@ -454,9 +451,9 @@ const gamesData = [
         githubUrl: "https://github.com/Smash64Recomp/Smash64Recomp",
         videoUrl: null,
         screenshots: [
-            "https://i.imgur.com/smash64_1.jpg",
-            "https://i.imgur.com/smash64_2.jpg",
-            "https://i.imgur.com/smash64_3.jpg"
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=Super+Smash+Bros+PC",
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=Online+Multiplayer",
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=Smash64+Recomp"
         ],
         redditCommunity: "https://www.reddit.com/r/smashbros/",
         foundryVideos: [],
@@ -490,19 +487,16 @@ const gamesData = [
         githubUrl: "https://github.com/hedge-dev/UnleashedRecomp",
         videoUrl: null,
         screenshots: [
-            "https://i.imgur.com/unleashed_1.jpg",
-            "https://i.imgur.com/unleashed_2.jpg",
-            "https://i.imgur.com/unleashed_3.jpg",
-            "https://i.imgur.com/unleashed_4.jpg",
-            "https://i.imgur.com/unleashed_5.jpg"
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=Sonic+Unleashed+PC",
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=Unleashed+Recomp",
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=HD+Werehog",
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=Ultrawide+Support",
+            "https://placehold.co/600x400/1a1a1a/39ff14?text=120fps+Day+Stages"
         ],
         redditCommunity: "https://www.reddit.com/r/SonicUnleashed/",
-        foundryVideos: [
-            { title: "DF Tech Review: Sonic Unleashed PC Port", url: "https://www.youtube.com/watch?v=1wR5wZZv3gI", id: "1wR5wZZv3gI" }
-        ],
+        foundryVideos: [],
         tutorials: {
             youtube: [
-                { title: "Sonic Unleashed PC Port Setup", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", author: "Community", embed: true }
             ],
             written: [
                 { title: "Unleashed Recompiled Released", url: "https://www.gamesradar.com/games/sonic-the-hedgehog/sonic-fans-are-leading-the-charge-on-a-new-preservation-tool-that-can-help-give-any-xbox-360-game-a-native-pc-port/", site: "GamesRadar+" },
