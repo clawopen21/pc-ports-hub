@@ -180,10 +180,10 @@ const gamesData = [
         videoUrl: "https://www.youtube.com/watch?v=LKNbvvNBiAo",
         screenshots: [
             "https://img.youtube.com/vi/LKNbvvNBiAo/maxresdefault.jpg",
-            "https://img.youtube.com/vi/na9Jj2LEYK0/maxresdefault.jpg",
-            "https://placehold.co/600x400/1a1a1a/39ff14?text=Jak+%26+Daxter+PC",
-            "https://placehold.co/600x400/1a1a1a/39ff14?text=Enhanced+Visuals",
-            "https://placehold.co/600x400/1a1a1a/39ff14?text=OpenGOAL+Engine"
+            "https://opengoal.dev/gallery/jak1/promo/promo-box1.avif",
+            "https://opengoal.dev/gallery/jak1/promo/promo-box2.avif",
+            "https://opengoal.dev/gallery/jak1/promo/promo-box3.avif",
+            "https://opengoal.dev/gallery/jak1/promo/promoA1.avif"
         ],
         redditCommunity: "https://www.reddit.com/r/jakanddaxter/",
         foundryVideos: [],
@@ -224,9 +224,9 @@ const gamesData = [
         videoUrl: "https://www.youtube.com/watch?v=itmxDxgeEyA",
         screenshots: [
             "https://img.youtube.com/vi/itmxDxgeEyA/maxresdefault.jpg",
-            "https://placehold.co/600x400/1a1a1a/39ff14?text=Jak+II+PC+Port",
-            "https://placehold.co/600x400/1a1a1a/39ff14?text=HD+Support",
-            "https://placehold.co/600x400/1a1a1a/39ff14?text=120fps+Gameplay"
+            "https://opengoal.dev/gallery/jak2/2023-02/aspect-1.png",
+            "https://opengoal.dev/gallery/jak2/2023-02/ultrawide-1.png",
+            "https://opengoal.dev/gallery/jak2/2023-02/onin-game.png"
         ],
         redditCommunity: "https://www.reddit.com/r/jakanddaxter/",
         foundryVideos: [],
