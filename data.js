@@ -51,9 +51,9 @@ const gamesData = [
         projectName: "Ship of Harkinian",
         description: "Modern PC port with save states, randomizer support, and enhancements. The definitive way to experience one of the greatest games ever made.",
         githubUrl: "https://github.com/HarbourMasters/Shipwright",
-        videoUrl: "https://www.youtube.com/watch?v=ERKxHQHi8Dw",
+        videoUrl: "https://www.youtube.com/watch?v=G94xJm5P4G0",
         screenshots: [
-            "https://img.youtube.com/vi/ERKxHQHi8Dw/maxresdefault.jpg",
+            "https://img.youtube.com/vi/G94xJm5P4G0/maxresdefault.jpg",
             "https://img.youtube.com/vi/sETZH_VN0ao/maxresdefault.jpg",
             "https://placehold.co/600x400/1a1a1a/39ff14?text=Ship+of+Harkinian",
             "https://placehold.co/600x400/1a1a1a/39ff14?text=HD+GUI",
@@ -177,9 +177,9 @@ const gamesData = [
         projectName: "opengoal",
         description: "Decompiled and ported to PC with enhanced visuals. Naughty Dog's colorful platformer shines at high resolutions and smooth frame rates.",
         githubUrl: "https://github.com/open-goal/jak-project",
-        videoUrl: "https://www.youtube.com/watch?v=LKNbvvNBiAo",
+        videoUrl: "https://www.youtube.com/watch?v=kSCFVStWHHc",
         screenshots: [
-            "https://img.youtube.com/vi/LKNbvvNBiAo/maxresdefault.jpg",
+            "https://img.youtube.com/vi/kSCFVStWHHc/maxresdefault.jpg",
             "https://opengoal.dev/gallery/jak1/promo/promo-box1.avif",
             "https://opengoal.dev/gallery/jak1/promo/promo-box2.avif",
             "https://opengoal.dev/gallery/jak1/promo/promo-box3.avif",
