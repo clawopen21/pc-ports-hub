@@ -53,6 +53,96 @@
             background-size: 100% 4px;
             pointer-events: none;
         }
+        .screenshot-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+        }
+        @media (min-width: 768px) {
+            .screenshot-gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @media (min-width: 1024px) {
+            .screenshot-gallery {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        .screenshot-item {
+            aspect-ratio: 16/9;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            border: 1px solid #2a2a2a;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .screenshot-item:hover {
+            border-color: #39ff14;
+            transform: scale(1.02);
+        }
+        .screenshot-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .screenshot-item.featured {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            border: 1px solid #2a2a2a;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .reddit-card {
+            background: linear-gradient(135deg, #FF4500 0%, #FF5722 100%);
+            border: none;
+        }
+        .foundry-badge {
+            background: linear-gradient(135deg, #FF6B00 0%, #FF8C00 100%);
+        }
+        .foundry-section {
+            background: linear-gradient(180deg, rgba(255, 107, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+            border: 1px solid rgba(255, 107, 0, 0.3);
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 100;
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox.active {
+            display: flex;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body class="text-gray-300 font-body antialiased">
@@ -77,17 +167,20 @@
 
     <!-- Game Details -->
     <section class="py-12 grid-pattern scanline">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="mb-6">
-                <span id="game-console" class="text-sm text-gray-500">Loading...</span>
-                <h1 id="game-name" class="font-retro text-2xl sm:text-3xl text-white mt-2">Loading...</h1>
+        <div class="max-w-6xl mx-auto px-4">
+            <!-- Header Info -->
+            <div class="mb-8">
+                <div class="flex items-center gap-2 mb-2">
+                    <span id="game-console" class="text-sm text-gray-500">Loading...</span>
+                    <span id="game-status" class="hidden px-2 py-0.5 text-xs font-medium rounded-full bg-neon-green/20 text-neon-green border border-neon-green/30">Complete</span>
+                </div>
+                <h1 id="game-name" class="font-retro text-3xl sm:text-4xl text-white mb-4">Loading...</h1>
+                <p id="game-description" class="text-gray-400 text-lg max-w-3xl">
+                    Loading game details...
+                </p>
             </div>
 
-            <p id="game-description" class="text-gray-400 text-lg mb-8">
-                Loading game details...
-            </p>
-
-            <!-- Action Buttons -->
+            <!-- Primary Action Buttons -->
             <div class="flex flex-wrap gap-4 mb-12">
                 <a id="github-link" href="#" 
                    target="_blank"
@@ -98,6 +191,15 @@
                     </svg>
                     View Source Code
                 </a>
+                <a id="reddit-link" href="#"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="hidden reddit-card flex items-center gap-2 px-6 py-3 text-white font-medium rounded hover:opacity-90 transition-opacity">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.532.217-.7.903-1.213 1.713-1.213.98 0 1.777.796 1.777 1.776 0 .98-.797 1.777-1.777 1.777-.783 0-1.45-.513-1.68-1.226a5.952 5.952 0 0 0-2.697.567c.27.486.42 1.043.42 1.625 0 1.988-2.045 3.6-4.569 3.6-2.524 0-4.569-1.612-4.569-3.6 0-.582.15-1.139.42-1.625a5.937 5.937 0 0 0-2.697-.567c-.23.713-.897 1.226-1.68 1.226-.98 0-1.777-.797-1.777-1.777 0-.98.797-1.776 1.777-1.776.81 0 1.496.513 1.713 1.213 1.194-.9 2.85-1.462 4.674-1.532l-.8-3.747-2.597.547a1.25 1.25 0 0 1-2.498-.056c0-.688.562-1.249 1.25-1.249l3.251-.683c.078-.016.157-.024.235-.024.196 0 .385.076.532.214l2.634 2.432c.473-.164.984-.252 1.512-.252 2.524 0 4.569 1.612 4.569 3.6 0 .582-.15 1.139-.42 1.625a5.943 5.943 0 0 0 2.697.567c.23-.713.897-1.226 1.68-1.226zm-7.995 5.776c-1.099 0-1.99.89-1.99 1.99 0 1.098.891 1.99 1.99 1.99 1.098 0 1.99-.892 1.99-1.99 0-1.099-.892-1.99-1.99-1.99zm7.995 0c-1.099 0-1.99.89-1.99 1.99 0 1.098.891 1.99 1.99 1.99 1.098 0 1.99-.892 1.99-1.99 0-1.099-.892-1.99-1.99-1.99z"/>
+                    </svg>
+                    Join Community
+                </a>
                 <a id="video-link" href="#"
                    target="_blank"
                    rel="noopener noreferrer"
@@ -107,6 +209,32 @@
                     </svg>
                     Watch Video
                 </a>
+            </div>
+
+            <!-- Screenshots Gallery -->
+            <div id="screenshots-section" class="mb-12 hidden">
+                <h2 class="font-retro text-lg text-white mb-4 flex items-center gap-2">
+                    <svg class="w-5 h-5 text-neon-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                    </svg>
+                    Screenshots
+                </h2>
+                <div id="screenshots-grid" class="screenshot-gallery">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <!-- Direct Foundry Videos Section -->
+            <div id="foundry-section" class="foundry-section rounded-lg p-6 mb-12 hidden">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="foundry-badge px-3 py-1 rounded text-white text-sm font-bold">
+                        DIGITAL FOUNDRY
+                    </div>
+                    <span class="text-gray-400 text-sm">Expert Technical Analysis</span>
+                </div>
+                <div id="foundry-videos" class="grid md:grid-cols-2 gap-6">
+                    <!-- Populated by JS -->
+                </div>
             </div>
 
             <!-- Desktop Section -->
@@ -136,14 +264,14 @@
                 </h2>
                 
                 <!-- YouTube Tutorials -->
-                <div id="youtube-tutorials" class="mb-6 hidden">
+                <div id="youtube-tutorials" class="mb-8 hidden">
                     <h3 class="text-sm font-medium text-gray-400 mb-3 flex items-center gap-2">
                         <svg class="w-4 h-4 text-red-500" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
                         </svg>
-                        Video Tutorials
+                        Video Tutorials & Embeds
                     </h3>
-                    <div id="youtube-list" class="space-y-2">
+                    <div id="youtube-list" class="grid md:grid-cols-2 gap-4">
                         <!-- Populated by JS -->
                     </div>
                 </div>
@@ -191,6 +319,12 @@
             </div>
         </div>
     </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Screenshot">
+    </div>
 
     <script src="data.js"></script>
     <script src="app.js"></script>

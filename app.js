@@ -53,10 +53,20 @@ function createGameCard(game, index = 0) {
     // Stagger delay
     const staggerDelay = index * 0.05;
 
+    // Get first screenshot or YouTube thumbnail for card image
+    const cardImage = game.screenshots && game.screenshots.length > 0 
+        ? game.screenshots[0] 
+        : (game.videoUrl ? `https://img.youtube.com/vi/${getYoutubeId(game.videoUrl)}/mqdefault.jpg` : null);
+
     return `
         <article class="game-card stagger-in group border border-retro-gray rounded-lg overflow-hidden hover:border-neon-green bg-retro-dark cursor-pointer" 
                  style="animation-delay: ${staggerDelay}s"
                  onclick="window.location.href='game.html?id=${game.id}'">
+            ${cardImage ? `
+                <div class="h-40 overflow-hidden">
+                    <img src="${cardImage}" alt="${game.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                </div>
+            ` : ''}
             <div class="p-5">
                 <div class="flex items-start justify-between mb-3">
                     <div class="flex-1 min-w-0">
@@ -126,6 +136,13 @@ function createGameCard(game, index = 0) {
     `;
 }
 
+// Extract YouTube video ID from URL
+function getYoutubeId(url) {
+    if (!url) return null;
+    const match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&\s?]+)/);
+    return match ? match[1] : null;
+}
+
 // Setup filter buttons
 function setupFilters() {
     const filterButtons = document.querySelectorAll('button');
@@ -169,18 +186,67 @@ function loadGameDetails() {
     const nameEl = document.getElementById('game-name');
     const descEl = document.getElementById('game-description');
     const consoleEl = document.getElementById('game-console');
+    const statusEl = document.getElementById('game-status');
     const githubEl = document.getElementById('github-link');
     const videoEl = document.getElementById('video-link');
+    const redditEl = document.getElementById('reddit-link');
     
     if (nameEl) nameEl.textContent = game.name;
     if (descEl) descEl.textContent = game.description;
     if (consoleEl) consoleEl.textContent = `${game.originalConsole} (${game.year})`;
+    if (statusEl) {
+        statusEl.textContent = game.status;
+        statusEl.classList.remove('hidden');
+    }
     if (githubEl) githubEl.href = game.githubUrl;
+    
     if (videoEl && game.videoUrl) {
         videoEl.href = game.videoUrl;
         videoEl.style.display = 'flex';
     } else if (videoEl) {
         videoEl.style.display = 'none';
+    }
+
+    // Reddit community link
+    if (redditEl && game.redditCommunity) {
+        redditEl.href = game.redditCommunity;
+        redditEl.classList.remove('hidden');
+        redditEl.style.display = 'flex';
+    } else if (redditEl) {
+        redditEl.style.display = 'none';
+    }
+
+    // Screenshots gallery
+    const screenshotsSection = document.getElementById('screenshots-section');
+    const screenshotsGrid = document.getElementById('screenshots-grid');
+    if (screenshotsSection && screenshotsGrid && game.screenshots && game.screenshots.length > 0) {
+        screenshotsSection.classList.remove('hidden');
+        screenshotsGrid.innerHTML = game.screenshots.map((screenshot, index) => `
+            <div class="screenshot-item ${index === 0 ? 'featured' : ''}" onclick="openLightbox('${screenshot}')">
+                <img src="${screenshot}" alt="${game.name} screenshot ${index + 1}" loading="lazy">
+            </div>
+        `).join('');
+    }
+
+    // Direct Foundry videos section
+    const foundrySection = document.getElementById('foundry-section');
+    const foundryVideos = document.getElementById('foundry-videos');
+    if (foundrySection && foundryVideos && game.foundryVideos && game.foundryVideos.length > 0) {
+        foundrySection.classList.remove('hidden');
+        foundryVideos.innerHTML = game.foundryVideos.map(video => `
+            <div class="video-wrapper">
+                <div class="video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/${video.id}" 
+                        title="${video.title}"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="mt-2 text-sm text-gray-400">${video.title}</div>
+            </div>
+        `).join('');
     }
 
     // Populate features
@@ -231,23 +297,47 @@ function loadGameDetails() {
     if (game.tutorials && tutorialsSection) {
         let hasTutorials = false;
         
-        // YouTube tutorials
+        // YouTube tutorials with embeds
         if (game.tutorials.youtube && game.tutorials.youtube.length > 0 && youtubeList) {
             hasTutorials = true;
             youtubeTutorials.classList.remove('hidden');
-            youtubeList.innerHTML = game.tutorials.youtube.map(t => `
-                <a href="${t.url}" target="_blank" rel="noopener noreferrer"
-                   class="flex items-center gap-3 p-3 border border-retro-gray rounded-lg hover:border-red-500 hover:bg-red-500/5 transition-all group">
-                    <svg class="w-5 h-5 text-red-500 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
-                    </svg>
-                    <div class="flex-1 min-w-0">
-                        <div class="text-sm text-white group-hover:text-red-400 transition-colors truncate">${t.title}</div>
-                        <div class="text-xs text-gray-500">by ${t.author}</div>
-                    </div>
-                    <span class="text-xs text-gray-600 group-hover:text-red-400">↗</span>
-                </a>
-            `).join('');
+            youtubeList.innerHTML = game.tutorials.youtube.map((t, index) => {
+                const videoId = getYoutubeId(t.url);
+                if (t.embed && videoId) {
+                    // Full embed for first 2 videos
+                    if (index < 2) {
+                        return `
+                            <div class="video-wrapper">
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/${videoId}" 
+                                        title="${t.title}"
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="mt-2 text-sm text-white">${t.title}</div>
+                                <div class="text-xs text-gray-500">by ${t.author}</div>
+                            </div>
+                        `;
+                    }
+                }
+                // Link-only for additional videos
+                return `
+                    <a href="${t.url}" target="_blank" rel="noopener noreferrer"
+                       class="flex items-center gap-3 p-3 border border-retro-gray rounded-lg hover:border-red-500 hover:bg-red-500/5 transition-all group">
+                        <svg class="w-5 h-5 text-red-500 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                        </svg>
+                        <div class="flex-1 min-w-0">
+                            <div class="text-sm text-white group-hover:text-red-400 transition-colors truncate">${t.title}</div>
+                            <div class="text-xs text-gray-500">by ${t.author}</div>
+                        </div>
+                        <span class="text-xs text-gray-600 group-hover:text-red-400">↗</span>
+                    </a>
+                `;
+            }).join('');
         }
         
         // Written tutorials
@@ -275,7 +365,33 @@ function loadGameDetails() {
     }
 }
 
+// Lightbox functions
+function openLightbox(src) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    if (lightbox && lightboxImg) {
+        lightboxImg.src = src;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    if (lightbox) {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
+
 // Run detail page logic if on game.html
 if (window.location.pathname.includes('game.html')) {
     document.addEventListener('DOMContentLoaded', loadGameDetails);
 }
+
+// Keyboard shortcuts for lightbox
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeLightbox();
+    }
+});

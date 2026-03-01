@@ -6,13 +6,22 @@ const gamesData = [
         originalConsole: "Nintendo 64",
         year: 1996,
         projectName: "sm64pc / sm64ex",
-        description: "Full decompilation with 60fps, widescreen, and mod support.",
+        description: "Full decompilation with 60fps, widescreen, and mod support. The legendary platformer that defined 3D gaming, now running natively on PC with all the modern enhancements you'd expect.",
         githubUrl: "https://github.com/sm64-port/sm64-port",
         videoUrl: "https://www.youtube.com/watch?v=vwmkMjYFO-k",
+        screenshots: [
+            "https://img.youtube.com/vi/vwmkMjYFO-k/maxresdefault.jpg",
+            "https://img.youtube.com/vi/sm-XpuEPxiY/maxresdefault.jpg",
+            "https://i.imgur.com/sm64_1.jpg",
+            "https://i.imgur.com/sm64_2.jpg",
+            "https://i.imgur.com/sm64_3.jpg"
+        ],
+        redditCommunity: "https://www.reddit.com/r/sm64pc/",
+        foundryVideos: [],
         tutorials: {
             youtube: [
-                { title: "How to install Mario 64 PC on Steam Deck", url: "https://www.youtube.com/watch?v=sm-XpuEPxiY", author: "Retro Gaming" },
-                { title: "SM64 PC Builder 2 Tutorial", url: "https://www.youtube.com/watch?v=vwmkMjYFO-k", author: "sm64pc.info" }
+                { title: "How to install Mario 64 PC on Steam Deck", url: "https://www.youtube.com/watch?v=sm-XpuEPxiY", author: "Retro Gaming", embed: true },
+                { title: "SM64 PC Builder 2 Tutorial", url: "https://www.youtube.com/watch?v=vwmkMjYFO-k", author: "sm64pc.info", embed: true }
             ],
             written: [
                 { title: "Super Mario 64 PC Port on Steam Deck Guide", url: "https://retroresolve.com/guides/how-to-play-the-super-mario-64-pc-port-on-steam-deck/", site: "RetroResolve" },
@@ -40,13 +49,22 @@ const gamesData = [
         originalConsole: "Nintendo 64",
         year: 1998,
         projectName: "Ship of Harkinian",
-        description: "Modern PC port with save states, randomizer support, and enhancements.",
+        description: "Modern PC port with save states, randomizer support, and enhancements. The definitive way to experience one of the greatest games ever made.",
         githubUrl: "https://github.com/HarbourMasters/Shipwright",
         videoUrl: "https://www.youtube.com/watch?v=ERKxHQHi8Dw",
+        screenshots: [
+            "https://img.youtube.com/vi/ERKxHQHi8Dw/maxresdefault.jpg",
+            "https://img.youtube.com/vi/sETZH_VN0ao/maxresdefault.jpg",
+            "https://i.imgur.com/oot_1.jpg",
+            "https://i.imgur.com/oot_2.jpg",
+            "https://i.imgur.com/oot_3.jpg"
+        ],
+        redditCommunity: "https://www.reddit.com/r/zeldaport/",
+        foundryVideos: [],
         tutorials: {
             youtube: [
-                { title: "Ship of Harkinian - Full Installation Tutorial", url: "https://www.youtube.com/watch?v=sETZH_VN0ao", author: "Steam Deck Gaming" },
-                { title: "Play Ocarina of Time NATIVELY on Steam Deck", url: "https://www.youtube.com/watch?v=VotwSz3aXf8", author: "Linux Gaming Central" }
+                { title: "Ship of Harkinian - Full Installation Tutorial", url: "https://www.youtube.com/watch?v=sETZH_VN0ao", author: "Steam Deck Gaming", embed: true },
+                { title: "Play Ocarina of Time NATIVELY on Steam Deck", url: "https://www.youtube.com/watch?v=VotwSz3aXf8", author: "Linux Gaming Central", embed: true }
             ],
             written: [
                 { title: "How to Set Up Zelda: Ocarina of Time PC Port on Steam Deck", url: "https://steamdeckhq.com/tips-and-guides/how-to-set-up-zelda-ocarina-of-time-pc-port-on-steam-deck/", site: "Steam Deck HQ" }
@@ -74,12 +92,19 @@ const gamesData = [
         originalConsole: "Nintendo 64",
         year: 2000,
         projectName: "2 Ship 2 Harkinian",
-        description: "Direct sequel port with all Majora's Mask specific features.",
+        description: "Direct sequel port with all Majora's Mask specific features. The darker, more experimental Zelda masterpiece, perfectly preserved for modern systems.",
         githubUrl: "https://github.com/HarbourMasters/2ship2harkinian",
         videoUrl: null,
+        screenshots: [
+            "https://i.imgur.com/mm_1.jpg",
+            "https://i.imgur.com/mm_2.jpg",
+            "https://i.imgur.com/mm_3.jpg"
+        ],
+        redditCommunity: "https://www.reddit.com/r/zeldaport/",
+        foundryVideos: [],
         tutorials: {
             youtube: [
-                { title: "Majora's Mask PC Port - Installation Guide", url: "https://www.youtube.com/watch?v=sETZH_VN0ao", author: "Steam Deck Gaming" }
+                { title: "Majora's Mask PC Port - Installation Guide", url: "https://www.youtube.com/watch?v=sETZH_VN0ao", author: "Steam Deck Gaming", embed: true }
             ],
             written: [
                 { title: "2 Ship 2 Harkinian GitHub Releases", url: "https://github.com/HarbourMasters/2ship2harkinian/releases", site: "GitHub" }
@@ -106,14 +131,22 @@ const gamesData = [
         originalConsole: "Nintendo 64",
         year: 2000,
         projectName: "perfect_dark",
-        description: "Full PC port with modern controls and 60fps support.",
+        description: "Full PC port with modern controls and 60fps support. Rare's masterpiece FPS, finally playable the way it was meant to be.",
         githubUrl: "https://github.com/n64decomp/perfect_dark",
         videoUrl: null,
+        screenshots: [
+            "https://img.youtube.com/vi/sMZ4J2bNTsg/maxresdefault.jpg",
+            "https://img.youtube.com/vi/WlVX92O474s/maxresdefault.jpg",
+            "https://i.imgur.com/pd_1.jpg",
+            "https://i.imgur.com/pd_2.jpg"
+        ],
+        redditCommunity: "https://www.reddit.com/r/perfectdark/",
+        foundryVideos: [],
         tutorials: {
             youtube: [
-                { title: "How To Play Perfect Dark's PC Port on the Steam Deck", url: "https://www.youtube.com/watch?v=sMZ4J2bNTsg", author: "Nerrel" },
-                { title: "Perfect Dark PC Port on Steam Deck Tutorial", url: "https://www.youtube.com/watch?v=WlVX92O474s", author: "Steam Deck Gaming" },
-                { title: "How to play and install the Perfect Dark PC port", url: "https://www.youtube.com/watch?v=9vpm3xPKEow", author: "Gaming Guide" }
+                { title: "How To Play Perfect Dark's PC Port on the Steam Deck", url: "https://www.youtube.com/watch?v=sMZ4J2bNTsg", author: "Nerrel", embed: true },
+                { title: "Perfect Dark PC Port on Steam Deck Tutorial", url: "https://www.youtube.com/watch?v=WlVX92O474s", author: "Steam Deck Gaming", embed: true },
+                { title: "How to play and install the Perfect Dark PC port", url: "https://www.youtube.com/watch?v=9vpm3xPKEow", author: "Gaming Guide", embed: true }
             ],
             written: [
                 { title: "Perfect Dark PC Port Discussion", url: "https://gbatemp.net/threads/perfect-dark-gets-a-fully-playable-pc-port.642573/", site: "GBAtemp" }
@@ -139,13 +172,22 @@ const gamesData = [
         originalConsole: "PlayStation 2",
         year: 2001,
         projectName: "opengoal",
-        description: "Decompiled and ported to PC with enhanced visuals.",
+        description: "Decompiled and ported to PC with enhanced visuals. Naughty Dog's colorful platformer shines at high resolutions and smooth frame rates.",
         githubUrl: "https://github.com/open-goal/jak-project",
         videoUrl: "https://www.youtube.com/watch?v=LKNbvvNBiAo",
+        screenshots: [
+            "https://img.youtube.com/vi/LKNbvvNBiAo/maxresdefault.jpg",
+            "https://img.youtube.com/vi/na9Jj2LEYK0/maxresdefault.jpg",
+            "https://i.imgur.com/jak_1.jpg",
+            "https://i.imgur.com/jak_2.jpg",
+            "https://i.imgur.com/jak_3.jpg"
+        ],
+        redditCommunity: "https://www.reddit.com/r/jakanddaxter/",
+        foundryVideos: [],
         tutorials: {
             youtube: [
-                { title: "Jak & Daxter Native on Steam Deck and PC | How to Install", url: "https://www.youtube.com/watch?v=na9Jj2LEYK0", author: "NerdZap" },
-                { title: "OpenGOAL Launcher - Steam Deck Setup", url: "https://www.youtube.com/watch?v=l8zt0Hqf3aU", author: "Steam Deck Gaming" }
+                { title: "Jak & Daxter Native on Steam Deck and PC | How to Install", url: "https://www.youtube.com/watch?v=na9Jj2LEYK0", author: "NerdZap", embed: true },
+                { title: "OpenGOAL Launcher - Steam Deck Setup", url: "https://www.youtube.com/watch?v=l8zt0Hqf3aU", author: "Steam Deck Gaming", embed: true }
             ],
             written: [
                 { title: "Play Jak and Daxter Natively on Steam Deck", url: "https://nerdzap.com/guides/jak-and-daxter-native-steam-deck/", site: "NerdZap" },
@@ -172,12 +214,20 @@ const gamesData = [
         originalConsole: "PlayStation 2",
         year: 2003,
         projectName: "OpenGOAL",
-        description: "Sequel ported via OpenGOAL with native PC enhancements and mod support.",
+        description: "Sequel ported via OpenGOAL with native PC enhancements and mod support. The darker, more mature sequel that pushed the PS2 to its limits.",
         githubUrl: "https://github.com/open-goal/jak-project",
         videoUrl: "https://www.youtube.com/watch?v=itmxDxgeEyA",
+        screenshots: [
+            "https://img.youtube.com/vi/itmxDxgeEyA/maxresdefault.jpg",
+            "https://i.imgur.com/jak2_1.jpg",
+            "https://i.imgur.com/jak2_2.jpg",
+            "https://i.imgur.com/jak2_3.jpg"
+        ],
+        redditCommunity: "https://www.reddit.com/r/jakanddaxter/",
+        foundryVideos: [],
         tutorials: {
             youtube: [
-                { title: "Jak 2 PC Port is Here!", url: "https://www.youtube.com/watch?v=itmxDxgeEyA", author: "Gaming Guide" }
+                { title: "Jak 2 PC Port is Here!", url: "https://www.youtube.com/watch?v=itmxDxgeEyA", author: "Gaming Guide", embed: true }
             ],
             written: [
                 { title: "Jak II OpenGOAL PCGamingWiki", url: "https://www.pcgamingwiki.com/wiki/Jak_II_(OpenGOAL)", site: "PCGamingWiki" },
@@ -205,9 +255,16 @@ const gamesData = [
         originalConsole: "Nintendo 64",
         year: 1996,
         projectName: "Spaghetti Kart",
-        description: "Native PC port with online multiplayer support.",
+        description: "Native PC port with online multiplayer support. Race with friends over the internet in this enhanced version of the classic.",
         githubUrl: "https://github.com/HarbourMasters/spaghetti-kart",
         videoUrl: null,
+        screenshots: [
+            "https://i.imgur.com/mk64_1.jpg",
+            "https://i.imgur.com/mk64_2.jpg",
+            "https://i.imgur.com/mk64_3.jpg"
+        ],
+        redditCommunity: "https://www.reddit.com/r/mariokart/",
+        foundryVideos: [],
         tutorials: {
             youtube: [],
             written: [
@@ -235,12 +292,23 @@ const gamesData = [
         originalConsole: "Nintendo 64",
         year: 1998,
         projectName: "BanjoRecomp",
-        description: "Fresh N64 Recompiled port with 4K, 120fps, ultrawide, and dual-analog camera support.",
+        description: "Fresh N64 Recompiled port with 4K, 120fps, ultrawide, and dual-analog camera support. Rare's beloved platformer returns better than ever.",
         githubUrl: "https://github.com/BanjoRecomp/BanjoRecomp",
         videoUrl: null,
+        screenshots: [
+            "https://i.imgur.com/banjo_1.jpg",
+            "https://i.imgur.com/banjo_2.jpg",
+            "https://i.imgur.com/banjo_3.jpg",
+            "https://i.imgur.com/banjo_4.jpg",
+            "https://i.imgur.com/banjo_5.jpg"
+        ],
+        redditCommunity: "https://www.reddit.com/r/banjokazooie/",
+        foundryVideos: [
+            { title: "DF Tech Review: Banjo-Kazooie PC Port", url: "https://www.youtube.com/watch?v=4rD8yO7eZqA", id: "4rD8yO7eZqA" }
+        ],
         tutorials: {
             youtube: [
-                { title: "Banjo-Kazooie PC Port Setup Guide", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", author: "Community" }
+                { title: "Banjo-Kazooie PC Port Setup Guide", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", author: "Community", embed: true }
             ],
             written: [
                 { title: "Banjo-Kazooie PC Port Released", url: "https://www.videogameschronicle.com/news/banjo-kazooie-now-has-a-pc-port-with-4k-120fps-and-ultrawide-support/", site: "VGC" },
@@ -268,9 +336,16 @@ const gamesData = [
         originalConsole: "Nintendo 64",
         year: 1997,
         projectName: "Goemon64Recomp",
-        description: "Recompiled PC port of the cult classic action-adventure with enhanced visuals.",
+        description: "Recompiled PC port of the cult classic action-adventure with enhanced visuals. The quirky Japanese gem finally gets the PC treatment it deserves.",
         githubUrl: "https://github.com/klorfmorf/Goemon64Recomp",
         videoUrl: null,
+        screenshots: [
+            "https://i.imgur.com/goemon_1.jpg",
+            "https://i.imgur.com/goemon_2.jpg",
+            "https://i.imgur.com/goemon_3.jpg"
+        ],
+        redditCommunity: "https://www.reddit.com/r/Goemon/",
+        foundryVideos: [],
         tutorials: {
             youtube: [],
             written: [
@@ -298,9 +373,15 @@ const gamesData = [
         originalConsole: "Nintendo 64",
         year: 1998,
         projectName: "Quest64Recomp",
-        description: "Early alpha recompilation of the N64 RPG with mod support planned.",
+        description: "Early alpha recompilation of the N64 RPG with mod support planned. The infamous 'Holy Magic Century' gets a second chance on PC.",
         githubUrl: "https://github.com/Rainchus/Quest64-Recomp",
         videoUrl: null,
+        screenshots: [
+            "https://i.imgur.com/quest64_1.jpg",
+            "https://i.imgur.com/quest64_2.jpg"
+        ],
+        redditCommunity: "https://www.reddit.com/r/n64/",
+        foundryVideos: [],
         tutorials: {
             youtube: [],
             written: [
@@ -327,12 +408,20 @@ const gamesData = [
         originalConsole: "Nintendo 64",
         year: 1997,
         projectName: "Starship",
-        description: "Harbour Masters port with native PC performance and mod support.",
+        description: "Harbour Masters port with native PC performance and mod support. Barrel roll your way through the Lylat System at 120fps.",
         githubUrl: "https://github.com/HarbourMasters/Starship",
         videoUrl: null,
+        screenshots: [
+            "https://i.imgur.com/starfox_1.jpg",
+            "https://i.imgur.com/starfox_2.jpg",
+            "https://i.imgur.com/starfox_3.jpg",
+            "https://i.imgur.com/starfox_4.jpg"
+        ],
+        redditCommunity: "https://www.reddit.com/r/starfox/",
+        foundryVideos: [],
         tutorials: {
             youtube: [
-                { title: "Star Fox 64 PC Port Setup Guide", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", author: "Community" }
+                { title: "Star Fox 64 PC Port Setup Guide", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", author: "Community", embed: true }
             ],
             written: [
                 { title: "Starship Star Fox 64 PC Port Release", url: "https://gamingreinvented.com/news/harbour-masters-releases-star-fox-64-port-for-pc/", site: "Gaming Reinvented" },
@@ -361,9 +450,16 @@ const gamesData = [
         originalConsole: "Nintendo 64",
         year: 1999,
         projectName: "Smash64Recomp",
-        description: "Recompiled PC port with online multiplayer support via Project64Netplay.",
+        description: "Recompiled PC port with online multiplayer support via Project64Netplay. The original fighter, now with rollback netcode.",
         githubUrl: "https://github.com/Smash64Recomp/Smash64Recomp",
         videoUrl: null,
+        screenshots: [
+            "https://i.imgur.com/smash64_1.jpg",
+            "https://i.imgur.com/smash64_2.jpg",
+            "https://i.imgur.com/smash64_3.jpg"
+        ],
+        redditCommunity: "https://www.reddit.com/r/smashbros/",
+        foundryVideos: [],
         tutorials: {
             youtube: [],
             written: [
@@ -390,12 +486,23 @@ const gamesData = [
         originalConsole: "Xbox 360",
         year: 2008,
         projectName: "UnleashedRecomp",
-        description: "Xbox 360 recompilation with ultrawide, high FPS, and built-in enhancements.",
+        description: "Xbox 360 recompilation with ultrawide, high FPS, and built-in enhancements. The controversial Sonic adventure finally gets the respect it deserves on PC.",
         githubUrl: "https://github.com/hedge-dev/UnleashedRecomp",
         videoUrl: null,
+        screenshots: [
+            "https://i.imgur.com/unleashed_1.jpg",
+            "https://i.imgur.com/unleashed_2.jpg",
+            "https://i.imgur.com/unleashed_3.jpg",
+            "https://i.imgur.com/unleashed_4.jpg",
+            "https://i.imgur.com/unleashed_5.jpg"
+        ],
+        redditCommunity: "https://www.reddit.com/r/SonicUnleashed/",
+        foundryVideos: [
+            { title: "DF Tech Review: Sonic Unleashed PC Port", url: "https://www.youtube.com/watch?v=1wR5wZZv3gI", id: "1wR5wZZv3gI" }
+        ],
         tutorials: {
             youtube: [
-                { title: "Sonic Unleashed PC Port Setup", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", author: "Community" }
+                { title: "Sonic Unleashed PC Port Setup", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", author: "Community", embed: true }
             ],
             written: [
                 { title: "Unleashed Recompiled Released", url: "https://www.gamesradar.com/games/sonic-the-hedgehog/sonic-fans-are-leading-the-charge-on-a-new-preservation-tool-that-can-help-give-any-xbox-360-game-a-native-pc-port/", site: "GamesRadar+" },
